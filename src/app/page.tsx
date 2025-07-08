@@ -9,6 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
+import { PhotoGallery } from '@/components/photo-gallery';
 
 
 // Data for the page
@@ -162,14 +163,6 @@ const faqs = [
         question: "Mohu si kurník přizpůsobit?",
         answer: "V současné době nabízíme Model Klasik pouze ve standardní konfiguraci, abychom zajistili kvalitu a rychlé dodání. Zkoumáme možnosti přizpůsobení do budoucna!"
     }
-];
-
-const galleryImages = [
-  { src: 'https://placehold.co/800x600.png', alt: 'Spokojený zákazník s kurníkem na zahradě', hint: 'chicken coop garden' },
-  { src: 'https://placehold.co/800x600.png', alt: 'Slepice si užívají nový kurník', hint: 'chickens coop' },
-  { src: 'https://placehold.co/800x600.png', alt: 'Krásný kurník při východu slunce', hint: 'chicken coop sunrise' },
-  { src: 'https://placehold.co/800x600.png', alt: 'Detail borového dřeva', hint: 'wood texture' },
-  { src: 'https://placehold.co/800x600.png', alt: 'Hejno slepic ve prostorném výběhu', hint: 'chickens farm' },
 ];
 
 export default function Home() {
@@ -395,27 +388,7 @@ export default function Home() {
         </section>
 
         <section id="gallery" className="py-16 md:py-24 bg-background">
-          <div className="container">
-            <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">Z naší farmy na vaši</h2>
-            <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">Podívejte se na naše kurníky v jejich nových domovech, kde udržují hejna šťastná a v bezpečí po celé zemi.</p>
-            <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 md:gap-8">
-                {galleryImages.map((image, index) => (
-                  <Card key={index} className="overflow-hidden group">
-                    <CardContent className="p-0">
-                      <div className="aspect-video relative">
-                        <Image
-                          src={image.src}
-                          alt={image.alt}
-                          data-ai-hint={image.hint}
-                          fill
-                          className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
-                        />
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-            </div>
-          </div>
+          <PhotoGallery />
         </section>
 
         <section id="testimonials" className={cn('py-16 md:py-24', 'bg-wood-pattern')}>
