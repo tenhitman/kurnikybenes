@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Feathered Estates',
-  description: 'Handcrafted chicken coops for a happy flock.',
+  description: 'Ručně vyráběné kurníky pro spokojené hejno.',
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="cs" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

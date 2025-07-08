@@ -12,16 +12,16 @@ import { cn } from '@/lib/utils';
 
 // Data for the page
 const coop = {
-  name: 'The Rustic Roost',
+  name: 'Rustikální Hnízdo',
   image: 'https://placehold.co/600x400.png',
   hint: 'chicken coop',
-  description: 'A classic design with ample space, perfect for a growing flock. Combines durability with a charming aesthetic to complement any backyard.',
-  price: '$499',
+  description: 'Klasický design s dostatkem prostoru, ideální pro rostoucí hejno. Spojuje odolnost s okouzlujícím vzhledem, který doplní každou zahradu.',
+  price: '12 499 Kč',
   specs: {
-    dimensions: '4\' W x 6\' L x 5\' H',
-    capacity: '4-6 chickens',
-    materials: 'Premium pine wood, galvanized steel mesh',
-    features: 'External nesting box, 2 roosting bars, easy-clean slide-out tray, secure latches, ventilation window',
+    dimensions: '120cm Š x 180cm D x 150cm V',
+    capacity: '4-6 slepic',
+    materials: 'Prémiové borové dřevo, pozinkované ocelové pletivo',
+    features: 'Vnější hnízdní box, 2 hřady, snadno čistitelný výsuvný tác, bezpečné západky, ventilační okno',
     gallery: [
         { src: 'https://placehold.co/600x400.png', hint: 'chicken coop front' },
         { src: 'https://placehold.co/600x400.png', hint: 'chicken coop side' },
@@ -33,18 +33,18 @@ const coop = {
 const features = [
   {
     icon: 'ShieldCheck',
-    title: 'Built to Last',
-    description: 'Constructed with premium, weather-resistant pine and galvanized steel to protect your flock from predators and the elements.',
+    title: 'Postaveno, aby vydrželo',
+    description: 'Vyrobeno z prémiového, povětrnostně odolného borového dřeva a pozinkované oceli, aby chránilo vaše hejno před predátory a živly.',
   },
   {
     icon: 'Heart',
-    title: 'Happy Hens Guaranteed',
-    description: 'Spacious interior with comfortable roosting bars and a secluded nesting box provides a stress-free environment for laying.',
+    title: 'Spokojené slepice zaručeny',
+    description: 'Prostorný interiér s pohodlnými hřady a odlehlým hnízdním boxem poskytuje prostředí bez stresu pro snášení vajec.',
   },
   {
     icon: 'Wrench',
-    title: 'Easy for You',
-    description: 'A slide-out tray for quick cleaning and a large access door mean less time on chores and more time enjoying your chickens.',
+    title: 'Jednoduché pro vás',
+    description: 'Výsuvný tác pro rychlé čištění a velká přístupová dvířka znamenají méně času na povinnosti a více času na radost z vašich slepic.',
   },
 ];
 
@@ -56,42 +56,42 @@ const featureIcons = {
 
 const testimonials = [
   {
-    quote: "The Rustic Roost is fantastic! It was easy to assemble and our chickens took to it immediately. It's sturdy and looks great in our yard.",
-    author: 'Emily R.',
-    location: 'Maple Creek',
+    quote: "Rustikální Hnízdo je fantastické! Montáž byla snadná a naše slepice si ho okamžitě oblíbily. Je robustní a na naší zahradě vypadá skvěle.",
+    author: 'Emílie R.',
+    location: 'Lhota',
   },
   {
-    quote: "I'm so impressed with the quality and design. The easy-clean tray is a game-changer. Highly recommend Feathered Estates!",
+    quote: "Jsem tak ohromen kvalitou a designem. Snadno čistitelný tác je revoluční. Vřele doporučuji Feathered Estates!",
     author: 'David L.',
-    location: 'Oak Valley',
+    location: 'Doubrava',
   },
 ];
 
 const faqs = [
     {
-        question: "How long does assembly take?",
-        answer: "The Rustic Roost is designed for easy assembly. With two people, it typically takes 1-2 hours. All hardware and detailed instructions are included."
+        question: "Jak dlouho trvá montáž?",
+        answer: "Rustikální Hnízdo je navrženo pro snadnou montáž. Ve dvou lidech to obvykle trvá 1-2 hodiny. Všechny součástky a podrobné pokyny jsou součástí balení."
     },
     {
-        question: "Is the wood treated?",
-        answer: "We use high-quality, durable pine wood. While it's naturally resilient, we recommend applying a non-toxic sealant annually to maximize its lifespan."
+        question: "Je dřevo ošetřené?",
+        answer: "Používáme vysoce kvalitní, odolné borové dřevo. I když je přirozeně odolné, doporučujeme každoročně aplikovat netoxický nátěr pro maximální prodloužení životnosti."
     },
     {
-        question: "What is the shipping cost and time?",
-        answer: "We offer flat-rate shipping to the continental US. Shipping usually takes 5-7 business days. You'll receive a tracking number once your order is dispatched."
+        question: "Jaké jsou náklady na dopravu a doba doručení?",
+        answer: "Nabízíme paušální dopravu po celé ČR. Doručení obvykle trvá 3-5 pracovních dnů. Po odeslání objednávky obdržíte sledovací číslo."
     },
     {
-        question: "Can I customize the coop?",
-        answer: "Currently, we only offer The Rustic Roost in its standard configuration to ensure quality and quick shipping. We are exploring customization options for the future!"
+        question: "Mohu si kurník přizpůsobit?",
+        answer: "V současné době nabízíme Rustikální Hnízdo pouze ve standardní konfiguraci, abychom zajistili kvalitu a rychlé dodání. Zkoumáme možnosti přizpůsobení do budoucna!"
     }
 ];
 
 const galleryImages = [
-  { src: 'https://placehold.co/800x600.png', alt: 'A happy customer\'s coop in their garden', hint: 'chicken coop garden' },
-  { src: 'https://placehold.co/800x600.png', alt: 'Chickens enjoying their new Rustic Roost coop', hint: 'chickens coop' },
-  { src: 'https://placehold.co/800x600.png', alt: 'A beautiful Barnyard Bungalow at sunrise', hint: 'chicken coop sunrise' },
-  { src: 'https://placehold.co/800x600.png', alt: 'Close-up of the cedar wood on the Garden Getaway', hint: 'wood texture' },
-  { src: 'https://placehold.co/800x600.png', alt: 'A flock of chickens in a spacious run', hint: 'chickens farm' },
+  { src: 'https://placehold.co/800x600.png', alt: 'Spokojený zákazník s kurníkem na zahradě', hint: 'chicken coop garden' },
+  { src: 'https://placehold.co/800x600.png', alt: 'Slepice si užívají nový kurník Rustikální Hnízdo', hint: 'chickens coop' },
+  { src: 'https://placehold.co/800x600.png', alt: 'Krásný kurník při východu slunce', hint: 'chicken coop sunrise' },
+  { src: 'https://placehold.co/800x600.png', alt: 'Detail cedrového dřeva', hint: 'wood texture' },
+  { src: 'https://placehold.co/800x600.png', alt: 'Hejno slepic ve prostorném výběhu', hint: 'chickens farm' },
 ];
 
 export default function Home() {
@@ -104,11 +104,12 @@ export default function Home() {
             Feathered Estates
           </a>
           <nav className="hidden md:flex gap-6 text-sm font-medium">
-            <a href="#features" className="transition-colors hover:text-primary">Features</a>
-            <a href="#coop" className="transition-colors hover:text-primary">The Coop</a>
-            <a href="#gallery" className="transition-colors hover:text-primary">Gallery</a>
+            <a href="#features" className="transition-colors hover:text-primary">Vlastnosti</a>
+            <a href="#coop" className="transition-colors hover:text-primary">Kurník</a>
+            <a href="#video" className="transition-colors hover:text-primary">Video</a>
+            <a href="#gallery" className="transition-colors hover:text-primary">Galerie</a>
             <a href="#faq" className="transition-colors hover:text-primary">FAQ</a>
-            <a href="#contact" className="transition-colors hover:text-primary">Contact</a>
+            <a href="#contact" className="transition-colors hover:text-primary">Kontakt</a>
           </nav>
         </div>
       </header>
@@ -117,7 +118,7 @@ export default function Home() {
         <section className="relative h-[70vh] w-full">
            <Image
             src="https://placehold.co/1920x1080.png"
-            alt="A beautiful rustic farm scene with a chicken coop"
+            alt="Krásná rustikální farma s kurníkem"
             data-ai-hint="rustic farm"
             fill
             className="object-cover"
@@ -126,13 +127,13 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4">
             <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
-              Quality Homes for Your Flock
+              Kvalitní domovy pro vaše hejno
             </h1>
             <p className="mt-4 max-w-2xl text-lg text-primary-foreground/80">
-              Discover our handcrafted chicken coop, built with love, care, and the finest natural materials.
+              Objevte náš ručně vyráběný kurník, postavený s láskou, péčí a z nejlepších přírodních materiálů.
             </p>
             <Button asChild size="lg" className="mt-8 bg-accent hover:bg-accent/90 text-accent-foreground">
-              <a href="#coop">View The Coop</a>
+              <a href="#coop">Prohlédnout kurník</a>
             </Button>
           </div>
         </section>
@@ -140,10 +141,10 @@ export default function Home() {
         <section id="features" className="py-16 md:py-24 bg-background">
           <div className="container">
             <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">
-              Why Feathered Estates?
+              Proč Feathered Estates?
             </h2>
             <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
-              We build coops with three things in mind: your flock's safety, their happiness, and your peace of mind.
+              Stavíme kurníky s ohledem na tři věci: bezpečí vašeho hejna, jejich štěstí a váš klid.
             </p>
             <div className="mt-12 grid gap-8 md:grid-cols-3">
               {features.map((feature) => (
@@ -161,10 +162,10 @@ export default function Home() {
           <div className="container">
             <div className="text-center">
               <h2 className="font-headline text-3xl md:text-4xl font-bold">
-                Our Featured Coop: The Rustic Roost
+                Náš hlavní model: {coop.name}
               </h2>
               <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                The perfect blend of craftsmanship, functionality, and rustic charm, designed to be the ideal home for your flock.
+                Dokonalé spojení řemeslného zpracování, funkčnosti a rustikálního šarmu, navržené jako ideální domov pro vaše hejno.
               </p>
             </div>
 
@@ -175,7 +176,7 @@ export default function Home() {
                       {coop.specs.gallery.map((img, i) => (
                         <CarouselItem key={i}>
                           <div className="aspect-video relative">
-                            <Image src={img.src} alt={`${coop.name} view ${i+1}`} data-ai-hint={img.hint} fill className="object-cover" />
+                            <Image src={img.src} alt={`${coop.name} pohled ${i+1}`} data-ai-hint={img.hint} fill className="object-cover" />
                           </div>
                         </CarouselItem>
                       ))}
@@ -190,20 +191,39 @@ export default function Home() {
                 <p className="mt-2 text-muted-foreground">{coop.description}</p>
                 
                 <div className="mt-6">
-                  <h4 className="font-headline text-xl font-semibold mb-2">Specifications</h4>
+                  <h4 className="font-headline text-xl font-semibold mb-2">Specifikace</h4>
                   <Table>
                     <TableBody>
-                      <TableRow><TableCell className="font-medium">Dimensions</TableCell><TableCell>{coop.specs.dimensions}</TableCell></TableRow>
-                      <TableRow><TableCell className="font-medium">Capacity</TableCell><TableCell>{coop.specs.capacity}</TableCell></TableRow>
-                      <TableRow><TableCell className="font-medium">Materials</TableCell><TableCell>{coop.specs.materials}</TableCell></TableRow>
-                      <TableRow><TableCell className="font-medium">Features</TableCell><TableCell>{coop.specs.features}</TableCell></TableRow>
+                      <TableRow><TableCell className="font-medium">Rozměry</TableCell><TableCell>{coop.specs.dimensions}</TableCell></TableRow>
+                      <TableRow><TableCell className="font-medium">Kapacita</TableCell><TableCell>{coop.specs.capacity}</TableCell></TableRow>
+                      <TableRow><TableCell className="font-medium">Materiály</TableCell><TableCell>{coop.specs.materials}</TableCell></TableRow>
+                      <TableRow><TableCell className="font-medium">Vlastnosti</TableCell><TableCell>{coop.specs.features}</TableCell></TableRow>
                     </TableBody>
                   </Table>
                 </div>
 
                 <div className="mt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
                   <p className="font-headline text-3xl font-bold text-primary">{coop.price}</p>
-                  <Button size="lg" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground">Inquire Now</Button>
+                  <Button size="lg" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground">Poptat nyní</Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="video" className="py-16 md:py-24 bg-background">
+          <div className="container">
+            <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">
+              Podívejte se na {coop.name} v akci
+            </h2>
+            <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
+              Projděte si s námi všechny detaily a přednosti našeho nejoblíbenějšího modelu.
+            </p>
+            <div className="mt-12 max-w-4xl mx-auto">
+              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center shadow-lg">
+                <div className="text-center cursor-pointer group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-muted-foreground transition-transform group-hover:scale-110"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                    <p className="mt-2 text-muted-foreground">Přehrát video</p>
                 </div>
               </div>
             </div>
@@ -212,8 +232,8 @@ export default function Home() {
 
         <section id="gallery" className="py-16 md:py-24">
           <div className="container">
-            <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">From Our Farm to Yours</h2>
-            <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">See our coops in their new homes, keeping flocks happy and safe across the country.</p>
+            <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">Z naší farmy na vaši</h2>
+            <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">Podívejte se na naše kurníky v jejich nových domovech, kde udržují hejna šťastná a v bezpečí po celé zemi.</p>
             <Carousel className="mt-12 w-full max-w-4xl mx-auto" opts={{ loop: true }}>
               <CarouselContent>
                 {galleryImages.map((image, index) => (
@@ -236,9 +256,9 @@ export default function Home() {
 
         <section id="testimonials" className="py-16 md:py-24 bg-background">
           <div className="container">
-            <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">What Our Customers Say</h2>
+            <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">Co říkají naši zákazníci</h2>
             <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
-              We're proud to have happy flocks and even happier owners.
+              Jsme hrdí na to, že máme šťastná hejna a ještě šťastnější majitele.
             </p>
             <div className="mt-12 grid gap-8 md:grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto">
               {testimonials.map((testimonial, index) => (
@@ -260,10 +280,10 @@ export default function Home() {
         <section id="faq" className={cn('py-16 md:py-24', 'bg-wood-pattern')}>
           <div className="container max-w-3xl mx-auto">
             <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">
-              Frequently Asked Questions
+              Často kladené otázky
             </h2>
             <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
-              Have questions? We've got answers.
+              Máte otázky? Máme odpovědi.
             </p>
             <Accordion type="single" collapsible className="w-full mt-12">
               {faqs.map((faq, index) => (
@@ -280,32 +300,32 @@ export default function Home() {
 
         <section id="contact" className="py-16 md:py-24 bg-background">
           <div className="container">
-            <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">Get In Touch</h2>
+            <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">Spojte se s námi</h2>
             <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
-              Have questions or ready to order? We'd love to hear from you.
+              Máte dotazy nebo jste připraveni objednat? Rádi se vám budeme věnovat.
             </p>
             <div className="mt-12 max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
               <div className="flex flex-col items-center text-center">
                 <Icons.Mail className="h-12 w-12 text-accent" />
-                <h3 className="mt-4 font-headline text-xl font-semibold">Email Us</h3>
-                <p className="text-muted-foreground mt-1">For sales and inquiries</p>
-                <a href="mailto:sales@featheredestates.com" className="mt-2 text-primary hover:underline">
-                  sales@featheredestates.com
+                <h3 className="mt-4 font-headline text-xl font-semibold">Napište nám</h3>
+                <p className="text-muted-foreground mt-1">Pro prodej a dotazy</p>
+                <a href="mailto:prodej@featheredestates.com" className="mt-2 text-primary hover:underline">
+                  prodej@featheredestates.com
                 </a>
               </div>
               <div className="flex flex-col items-center text-center">
                 <Icons.Phone className="h-12 w-12 text-accent" />
-                <h3 className="mt-4 font-headline text-xl font-semibold">Call Us</h3>
-                <p className="text-muted-foreground mt-1">Mon - Fri, 9am - 5pm</p>
-                <a href="tel:+1234567890" className="mt-2 text-primary hover:underline">
-                  (123) 456-7890
+                <h3 className="mt-4 font-headline text-xl font-semibold">Zavolejte nám</h3>
+                <p className="text-muted-foreground mt-1">Po - Pá, 9:00 - 17:00</p>
+                <a href="tel:+420123456789" className="mt-2 text-primary hover:underline">
+                  +420 123 456 789
                 </a>
               </div>
               <div className="flex flex-col items-center text-center">
                 <Icons.MapPin className="h-12 w-12 text-accent" />
-                <h3 className="mt-4 font-headline text-xl font-semibold">Our Workshop</h3>
-                <p className="text-muted-foreground mt-1">Come visit by appointment</p>
-                <p className="mt-2 text-primary">123 Rustic Lane, Meadowville</p>
+                <h3 className="mt-4 font-headline text-xl font-semibold">Naše dílna</h3>
+                <p className="text-muted-foreground mt-1">Návštěva po domluvě</p>
+                <p className="mt-2 text-primary">Rustikální 123, Loučná</p>
               </div>
             </div>
           </div>
@@ -314,7 +334,7 @@ export default function Home() {
 
       <footer className="border-t">
         <div className="container py-6 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Feathered Estates. All rights reserved.
+          © {new Date().getFullYear()} Feathered Estates. Všechna práva vyhrazena.
         </div>
       </footer>
     </div>
