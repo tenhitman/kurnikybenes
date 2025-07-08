@@ -190,14 +190,17 @@ export default function Home() {
 
       <main className="flex-1">
         <section className="relative h-[70vh] w-full">
-           <Image
-            src="https://placehold.co/1920x1080.png"
-            alt="Krásná rustikální farma s kurníkem"
-            data-ai-hint="rustic farm"
-            fill
-            className="object-cover"
-            priority
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            poster="https://placehold.co/1920x1080.png"
+          >
+            <source src="https://videos.pexels.com/video-files/4762557/4762557-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            Váš prohlížeč nepodporuje video tag.
+          </video>
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4">
             <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
@@ -206,9 +209,14 @@ export default function Home() {
             <p className="mt-4 max-w-2xl text-lg text-primary-foreground/80">
               Objevte náš ručně vyráběný kurník, postavený s láskou, péčí a z nejlepších přírodních materiálů.
             </p>
-            <Button asChild size="lg" className="mt-8 bg-accent hover:bg-accent/90 text-accent-foreground">
-              <a href="#coop">Prohlédnout kurník</a>
-            </Button>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                <a href="#coop">Prohlédnout kurník</a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white/20 hover:text-white">
+                <a href="#contact">Kontaktujte nás</a>
+              </Button>
+            </div>
           </div>
         </section>
 
