@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ShieldCheck, Heart, Wrench, Plus } from 'lucide-react';
+import { ShieldCheck, Heart, Wrench, Plus, Egg, GripVertical, Trash2, Lock, Wind } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -31,7 +31,7 @@ const coop = {
   },
 };
 
-const features = [
+const whyUsFeatures = [
   {
     icon: 'ShieldCheck',
     title: 'Postaveno, aby vydrželo',
@@ -49,10 +49,60 @@ const features = [
   },
 ];
 
-const featureIcons = {
+const whyUsIcons = {
   ShieldCheck: <ShieldCheck className="h-10 w-10 text-accent" />,
   Heart: <Heart className="h-10 w-10 text-accent" />,
   Wrench: <Wrench className="h-10 w-10 text-accent" />,
+};
+
+const aboutMe = {
+  name: 'Pan Beneš',
+  title: 'Truhlář a chovatel',
+  image: 'https://placehold.co/500x500.png',
+  hint: 'friendly carpenter',
+  bio: 'Jsem Tomáš Beneš, truhlář s celoživotní vášní pro práci se dřevem a láskou ke zvířatům. Po letech chovu vlastních slepic jsem se rozhodl spojit své dovednosti a zkušenosti a začal jsem vyrábět kurníky, které jsou nejen krásné a funkční, ale především bezpečné a pohodlné pro jejich opeřené obyvatele. Každý kurník vyrábím ručně s maximální péčí a důrazem na detail, jako bych ho stavěl pro své vlastní hejno.'
+};
+
+const detailedFeatures = [
+    {
+        icon: 'Egg',
+        title: 'Vnější hnízdní box',
+        description: 'Umožňuje snadný a rychlý sběr čerstvých vajec, aniž byste museli rušit slepice uvnitř kurníku.',
+    },
+    {
+        icon: 'GripVertical',
+        title: 'Pohodlné hřady',
+        description: 'Dva prostorné hřady poskytují slepicím dostatek místa pro pohodlný a přirozený odpočinek během noci.',
+    },
+    {
+        icon: 'Trash2',
+        title: 'Výsuvný čistící tác',
+        description: 'Zjednodušuje údržbu na minimum. Stačí tác vysunout, vyčistit a zasunout zpět. Rychlé a hygienické.',
+    },
+    {
+        icon: 'Lock',
+        title: 'Bezpečné západky',
+        description: 'Všechna dvířka jsou vybavena robustními západkami, které spolehlivě ochrání vaše hejno před kunami a dalšími predátory.',
+    },
+    {
+        icon: 'Wind',
+        title: 'Chytré větrání',
+        description: 'Nastavitelné ventilační okno zajišťuje optimální cirkulaci vzduchu a udržuje zdravé klima v každém ročním období.',
+    },
+    {
+        icon: 'ShieldCheck',
+        title: 'Odolná konstrukce',
+        description: 'Postaveno z kvalitního borového dřeva a s pozinkovaným pletivem, aby kurník odolal počasí i času.',
+    }
+];
+
+const detailedFeatureIcons = {
+    Egg: <Egg className="h-10 w-10 text-primary" />,
+    GripVertical: <GripVertical className="h-10 w-10 text-primary" />,
+    Trash2: <Trash2 className="h-10 w-10 text-primary" />,
+    Lock: <Lock className="h-10 w-10 text-primary" />,
+    Wind: <Wind className="h-10 w-10 text-primary" />,
+    ShieldCheck: <ShieldCheck className="h-10 w-10 text-primary" />,
 };
 
 const interactiveFeatures = [
@@ -132,9 +182,11 @@ export default function Home() {
             Kurníky Beneš
           </a>
           <nav className="hidden md:flex gap-6 text-sm font-medium">
-            <a href="#features" className="transition-colors hover:text-primary">Vlastnosti</a>
+            <a href="#features" className="transition-colors hover:text-primary">Proč my</a>
+            <a href="#about" className="transition-colors hover:text-primary">O nás</a>
             <a href="#coop" className="transition-colors hover:text-primary">Kurník</a>
-            <a href="#interactive" className="transition-colors hover:text-primary">Detaily</a>
+            <a href="#detailed-features" className="transition-colors hover:text-primary">Vlastnosti</a>
+            <a href="#interactive" className="transition-colors hover:text-primary">Prozkoumat</a>
             <a href="#video" className="transition-colors hover:text-primary">Video</a>
             <a href="#gallery" className="transition-colors hover:text-primary">Galerie</a>
             <a href="#faq" className="transition-colors hover:text-primary">FAQ</a>
@@ -176,13 +228,36 @@ export default function Home() {
               Stavíme kurníky s ohledem na tři věci: bezpečí vašeho hejna, jejich štěstí a váš klid.
             </p>
             <div className="mt-12 grid gap-8 md:grid-cols-3">
-              {features.map((feature) => (
+              {whyUsFeatures.map((feature) => (
                 <div key={feature.title} className="flex flex-col items-center text-center">
-                  {featureIcons[feature.icon as keyof typeof featureIcons]}
+                  {whyUsIcons[feature.icon as keyof typeof whyUsIcons]}
                   <h3 className="mt-4 font-headline text-xl font-semibold">{feature.title}</h3>
                   <p className="mt-2 text-muted-foreground">{feature.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+        
+        <section id="about" className={cn('py-16 md:py-24', 'bg-wood-pattern')}>
+          <div className="container">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative aspect-square">
+                <Image
+                  src={aboutMe.image}
+                  alt={`Portrét ${aboutMe.name}`}
+                  data-ai-hint={aboutMe.hint}
+                  fill
+                  className="rounded-lg object-cover shadow-lg"
+                />
+              </div>
+              <div className="bg-card p-8 rounded-lg shadow-lg">
+                <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Kdo stojí za vaším kurníkem?</h2>
+                <p className="mt-4 font-headline text-xl text-muted-foreground">{aboutMe.name}, {aboutMe.title}</p>
+                <p className="mt-6 text-muted-foreground">
+                  {aboutMe.bio}
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -240,6 +315,30 @@ export default function Home() {
           </div>
         </section>
         
+        <section id="detailed-features" className="py-16 md:py-24 bg-background">
+            <div className="container">
+                <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">
+                    Vybavení pro spokojené hejno
+                </h2>
+                <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Každý detail našeho kurníku je navržen s ohledem na pohodlí a bezpečí vašich slepic.
+                </p>
+                <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    {detailedFeatures.map((feature) => (
+                        <div key={feature.title} className="flex gap-4">
+                           <div className="flex-shrink-0">
+                             {detailedFeatureIcons[feature.icon as keyof typeof detailedFeatureIcons]}
+                           </div>
+                           <div>
+                             <h3 className="font-headline text-xl font-semibold">{feature.title}</h3>
+                             <p className="mt-1 text-muted-foreground">{feature.description}</p>
+                           </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
         <section id="interactive" className="py-16 md:py-24 bg-background">
           <div className="container">
             <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">Prozkoumejte každý detail</h2>
