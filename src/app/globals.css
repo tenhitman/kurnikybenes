@@ -84,6 +84,30 @@
   }
 }
 
+@layer utilities {
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+    80%,
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+  .hotspot::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background-color: hsl(var(--accent));
+    animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    z-index: -1;
+  }
+}
+
 @layer components {
   .bg-wood-pattern {
     background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');

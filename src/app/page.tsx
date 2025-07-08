@@ -1,22 +1,23 @@
 import Image from 'next/image';
-import { ShieldCheck, Heart, Wrench } from 'lucide-react';
+import { ShieldCheck, Heart, Wrench, Plus } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableRow } from '@/components/ui/table';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
 
 
 // Data for the page
 const coop = {
-  name: 'Rustikální Hnízdo',
+  name: 'Model Klasik',
   image: 'https://placehold.co/600x400.png',
   hint: 'chicken coop',
   description: 'Klasický design s dostatkem prostoru, ideální pro rostoucí hejno. Spojuje odolnost s okouzlujícím vzhledem, který doplní každou zahradu.',
-  price: '12 499 Kč',
+  price: 'od 12 499 Kč',
   specs: {
     dimensions: '120cm Š x 180cm D x 150cm V',
     capacity: '4-6 slepic',
@@ -54,14 +55,41 @@ const featureIcons = {
   Wrench: <Wrench className="h-10 w-10 text-accent" />,
 };
 
+const interactiveFeatures = [
+  {
+    id: 1,
+    position: { top: '35%', left: '75%' },
+    title: 'Ventilační okno',
+    description: 'Zajišťuje optimální proudění vzduchu pro zdravé prostředí uvnitř kurníku.',
+  },
+  {
+    id: 2,
+    position: { top: '60%', left: '85%' },
+    title: 'Vnější hnízdní box',
+    description: 'Pohodlný a bezpečný sběr vajec bez nutnosti vstupovat do kurníku a rušit slepice.',
+  },
+  {
+    id: 3,
+    position: { top: '78%', left: '50%' },
+    title: 'Výsuvný tác na trus',
+    description: 'Extrémně usnadňuje čištění. Stačí vysunout, vyčistit a zasunout zpět.',
+  },
+  {
+    id: 4,
+    position: { top: '55%', left: '20%' },
+    title: 'Bezpečné západky',
+    description: 'Robustní západky na všech dvířkách chrání vaše hejno před predátory.',
+  },
+];
+
 const testimonials = [
   {
-    quote: "Rustikální Hnízdo je fantastické! Montáž byla snadná a naše slepice si ho okamžitě oblíbily. Je robustní a na naší zahradě vypadá skvěle.",
+    quote: "Kurník je fantastický! Montáž byla snadná a naše slepice si ho okamžitě oblíbily. Je robustní a na naší zahradě vypadá skvěle.",
     author: 'Emílie R.',
     location: 'Lhota',
   },
   {
-    quote: "Jsem tak ohromen kvalitou a designem. Snadno čistitelný tác je revoluční. Vřele doporučuji Feathered Estates!",
+    quote: "Jsem tak ohromen kvalitou a designem. Snadno čistitelný tác je revoluční. Vřele doporučuji Kurníky Beneš!",
     author: 'David L.',
     location: 'Doubrava',
   },
@@ -70,7 +98,7 @@ const testimonials = [
 const faqs = [
     {
         question: "Jak dlouho trvá montáž?",
-        answer: "Rustikální Hnízdo je navrženo pro snadnou montáž. Ve dvou lidech to obvykle trvá 1-2 hodiny. Všechny součástky a podrobné pokyny jsou součástí balení."
+        answer: "Náš kurník je navržen pro snadnou montáž. Ve dvou lidech to obvykle trvá 1-2 hodiny. Všechny součástky a podrobné pokyny jsou součástí balení."
     },
     {
         question: "Je dřevo ošetřené?",
@@ -82,15 +110,15 @@ const faqs = [
     },
     {
         question: "Mohu si kurník přizpůsobit?",
-        answer: "V současné době nabízíme Rustikální Hnízdo pouze ve standardní konfiguraci, abychom zajistili kvalitu a rychlé dodání. Zkoumáme možnosti přizpůsobení do budoucna!"
+        answer: "V současné době nabízíme Model Klasik pouze ve standardní konfiguraci, abychom zajistili kvalitu a rychlé dodání. Zkoumáme možnosti přizpůsobení do budoucna!"
     }
 ];
 
 const galleryImages = [
   { src: 'https://placehold.co/800x600.png', alt: 'Spokojený zákazník s kurníkem na zahradě', hint: 'chicken coop garden' },
-  { src: 'https://placehold.co/800x600.png', alt: 'Slepice si užívají nový kurník Rustikální Hnízdo', hint: 'chickens coop' },
+  { src: 'https://placehold.co/800x600.png', alt: 'Slepice si užívají nový kurník', hint: 'chickens coop' },
   { src: 'https://placehold.co/800x600.png', alt: 'Krásný kurník při východu slunce', hint: 'chicken coop sunrise' },
-  { src: 'https://placehold.co/800x600.png', alt: 'Detail cedrového dřeva', hint: 'wood texture' },
+  { src: 'https://placehold.co/800x600.png', alt: 'Detail borového dřeva', hint: 'wood texture' },
   { src: 'https://placehold.co/800x600.png', alt: 'Hejno slepic ve prostorném výběhu', hint: 'chickens farm' },
 ];
 
@@ -101,11 +129,12 @@ export default function Home() {
         <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
           <a href="#" className="flex items-center gap-2 font-headline text-lg font-semibold">
             <Icons.Logo className="h-8 w-8 text-primary" />
-            Feathered Estates
+            Kurníky Beneš
           </a>
           <nav className="hidden md:flex gap-6 text-sm font-medium">
             <a href="#features" className="transition-colors hover:text-primary">Vlastnosti</a>
             <a href="#coop" className="transition-colors hover:text-primary">Kurník</a>
+            <a href="#interactive" className="transition-colors hover:text-primary">Detaily</a>
             <a href="#video" className="transition-colors hover:text-primary">Video</a>
             <a href="#gallery" className="transition-colors hover:text-primary">Galerie</a>
             <a href="#faq" className="transition-colors hover:text-primary">FAQ</a>
@@ -141,7 +170,7 @@ export default function Home() {
         <section id="features" className="py-16 md:py-24 bg-background">
           <div className="container">
             <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">
-              Proč Feathered Estates?
+              Proč Kurníky Beneš?
             </h2>
             <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
               Stavíme kurníky s ohledem na tři věci: bezpečí vašeho hejna, jejich štěstí a váš klid.
@@ -210,8 +239,44 @@ export default function Home() {
             </div>
           </div>
         </section>
+        
+        <section id="interactive" className="py-16 md:py-24 bg-background">
+          <div className="container">
+            <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">Prozkoumejte každý detail</h2>
+            <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
+              Kliknutím na jednotlivé body na obrázku zjistíte více o klíčových vlastnostech našeho kurníku.
+            </p>
+            <div className="mt-12 relative max-w-4xl mx-auto">
+              <Image
+                src="https://placehold.co/1024x768.png"
+                alt="Interaktivní pohled na kurník"
+                data-ai-hint="chicken coop details"
+                width={1024}
+                height={768}
+                className="rounded-lg shadow-lg w-full"
+              />
+              {interactiveFeatures.map((feature) => (
+                <Popover key={feature.id}>
+                  <PopoverTrigger asChild>
+                    <button
+                      className="absolute w-8 h-8 rounded-full bg-accent text-accent-foreground flex items-center justify-center shadow-lg hotspot z-10"
+                      style={{ top: feature.position.top, left: feature.position.left, transform: 'translate(-50%, -50%)' }}
+                      aria-label={`Více informací o: ${feature.title}`}
+                    >
+                      <Plus className="w-5 h-5" />
+                    </button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-64">
+                    <h4 className="font-bold text-lg mb-2 text-primary">{feature.title}</h4>
+                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  </PopoverContent>
+                </Popover>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        <section id="video" className="py-16 md:py-24 bg-background">
+        <section id="video" className="py-16 md:py-24">
           <div className="container">
             <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">
               Podívejte se na {coop.name} v akci
@@ -230,7 +295,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="gallery" className="py-16 md:py-24">
+        <section id="gallery" className="py-16 md:py-24 bg-background">
           <div className="container">
             <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">Z naší farmy na vaši</h2>
             <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">Podívejte se na naše kurníky v jejich nových domovech, kde udržují hejna šťastná a v bezpečí po celé zemi.</p>
@@ -254,7 +319,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="testimonials" className="py-16 md:py-24 bg-background">
+        <section id="testimonials" className={cn('py-16 md:py-24', 'bg-wood-pattern')}>
           <div className="container">
             <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">Co říkají naši zákazníci</h2>
             <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -277,7 +342,7 @@ export default function Home() {
           </div>
         </section>
         
-        <section id="faq" className={cn('py-16 md:py-24', 'bg-wood-pattern')}>
+        <section id="faq" className="py-16 md:py-24 bg-background">
           <div className="container max-w-3xl mx-auto">
             <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">
               Často kladené otázky
@@ -298,7 +363,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="py-16 md:py-24 bg-background">
+        <section id="contact" className={cn('py-16 md:py-24', 'bg-wood-pattern')}>
           <div className="container">
             <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">Spojte se s námi</h2>
             <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -309,8 +374,8 @@ export default function Home() {
                 <Icons.Mail className="h-12 w-12 text-accent" />
                 <h3 className="mt-4 font-headline text-xl font-semibold">Napište nám</h3>
                 <p className="text-muted-foreground mt-1">Pro prodej a dotazy</p>
-                <a href="mailto:prodej@featheredestates.com" className="mt-2 text-primary hover:underline">
-                  prodej@featheredestates.com
+                <a href="mailto:prodej@kurnikуbenes.com" className="mt-2 text-primary hover:underline">
+                  prodej@kurnikybenes.com
                 </a>
               </div>
               <div className="flex flex-col items-center text-center">
@@ -334,7 +399,7 @@ export default function Home() {
 
       <footer className="border-t">
         <div className="container py-6 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Feathered Estates. Všechna práva vyhrazena.
+          © {new Date().getFullYear()} Kurníky Beneš. Všechna práva vyhrazena.
         </div>
       </footer>
     </div>
