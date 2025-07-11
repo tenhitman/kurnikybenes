@@ -61,7 +61,7 @@ const aboutMe = {
   title: 'Truhlář a chovatel',
   image: 'https://placehold.co/500x500.png',
   hint: 'friendly carpenter',
-  bio: 'Jsem Tomáš Beneš, truhlář s celoživotní vášní pro práci se dřevem a láskou ke zvířatům. Po letech chovu vlastních slepic jsem se rozhodl spojit své dovednosti a zkušenosti a začal jsem vyrábět kurníky, které jsou nejen krásné a funkční, ale především bezpečné a pohodlné pro jejich opeřené obyvatele. Každý kurník vyrábím ručně s maximální péčí a důrazem na detail, jako bych ho stavěl pro své vlastní hejno.'
+  bio: 'Jsem Kamil Beneš, truhlář s celoživotní vášní pro práci se dřevem a láskou ke zvířatům. Po letech chovu vlastních slepic jsem se rozhodl spojit své dovednosti a zkušenosti a začal jsem vyrábět kurníky, které jsou nejen krásné a funkční, ale především bezpečné a pohodlné pro jejich opeřené obyvatele. Každý kurník vyrábím ručně s maximální péčí a důrazem na detail, jako bych ho stavěl pro své vlastní hejno.'
 };
 
 const detailedFeatures = [
