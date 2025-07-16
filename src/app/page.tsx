@@ -376,24 +376,28 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="video" className="py-16 md:py-24">
-          <div className="container">
-            <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">
-              Podívejte se na {coop.name} v akci
-            </h2>
-            <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
-              Projděte si s námi všechny detaily a přednosti našeho nejoblíbenějšího modelu.
-            </p>
-            <div className="mt-12 max-w-4xl mx-auto">
-              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center shadow-lg">
-                <div className="text-center cursor-pointer group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-muted-foreground transition-transform group-hover:scale-110"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
-                    <p className="mt-2 text-muted-foreground">Přehrát video</p>
-                </div>
-              </div>
-            </div>
+   <section id="video" className="py-16 md:py-24">
+      <div className="container">
+        <h2 className="text-center font-headline text-3xl md:text-4xl font-bold">
+          Podívejte se na náš model v akci
+        </h2>
+        <p className="mt-4 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
+          Projděte si s námi všechny detaily a přednosti našeho nejoblíbenějšího modelu.
+        </p>
+        <div className="mt-12 max-w-4xl mx-auto">
+          <div className="aspect-video bg-black rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/W_qoHwtREsc"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
 
         <section id="gallery" className="py-16 md:py-24 bg-background">
           <PhotoGallery />
