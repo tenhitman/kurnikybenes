@@ -1,5 +1,17 @@
 import Image from 'next/image';
-import { ShieldCheck, Heart, Wrench, Plus, Egg, GripVertical, Trash2, Lock, Wind } from 'lucide-react';
+import { ShieldCheck, Heart, Wrench, Plus, Egg, GripVertical, Trash2, Lock, Wind, DoorOpen,
+  Archive,
+  Layers,
+  Package as BoxPackage,
+  AirVent,
+  GripHorizontal,
+  HardDrive,
+  Ruler,
+  PanelRight,
+  HardHat,
+  Stars,
+  Feather,
+  Activity,} from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -46,7 +58,7 @@ const whyUsFeatures = [
   {
     icon: 'Wrench',
     title: 'Jednoduché pro vás',
-    description: 'Výsuvný tác pro rychlé čištění a velká přístupová dvířka znamenají méně času na povinnosti a více času na radost z vašich slepic.',
+    description: 'Díky velkým dvířkům a rozebíratelnému snáškovému boxu z hygienických materiálů je údržba kurníku rychlá, jednoduchá a účinná.',
   },
 ];
 
@@ -57,55 +69,128 @@ const whyUsIcons = {
 };
 
 const aboutMe = {
-  name: 'Pan Beneš',
+  name: 'Kamil Beneš',
   title: 'Truhlář a chovatel',
   image: 'https://placehold.co/500x500.png',
   hint: 'friendly carpenter',
-  bio: 'Jsem Kamil Beneš, truhlář s celoživotní vášní pro práci se dřevem a láskou ke zvířatům. Po letech chovu vlastních slepic jsem se rozhodl spojit své dovednosti a zkušenosti a začal jsem vyrábět kurníky, které jsou nejen krásné a funkční, ale především bezpečné a pohodlné pro jejich opeřené obyvatele. Každý kurník vyrábím ručně s maximální péčí a důrazem na detail, jako bych ho stavěl pro své vlastní hejno.'
 };
 
 const detailedFeatures = [
-    {
-        icon: 'Egg',
-        title: 'Vnější hnízdní box',
-        description: 'Umožňuje snadný a rychlý sběr čerstvých vajec, aniž byste museli rušit slepice uvnitř kurníku.',
-    },
-    {
-        icon: 'GripVertical',
-        title: 'Pohodlné hřady',
-        description: 'Dva prostorné hřady poskytují slepicím dostatek místa pro pohodlný a přirozený odpočinek během noci.',
-    },
-    {
-        icon: 'Trash2',
-        title: 'Výsuvný čistící tác',
-        description: 'Zjednodušuje údržbu na minimum. Stačí tác vysunout, vyčistit a zasunout zpět. Rychlé a hygienické.',
-    },
-    {
-        icon: 'Lock',
-        title: 'Bezpečné západky',
-        description: 'Všechna dvířka jsou vybavena robustními západkami, které spolehlivě ochrání vaše hejno před kunami a dalšími predátory.',
-    },
-    {
-        icon: 'Wind',
-        title: 'Chytré větrání',
-        description: 'Nastavitelné ventilační okno zajišťuje optimální cirkulaci vzduchu a udržuje zdravé klima v každém ročním období.',
-    },
-    {
-        icon: 'ShieldCheck',
-        title: 'Odolná konstrukce',
-        description: 'Postaveno z kvalitního borového dřeva a s pozinkovaným pletivem, aby kurník odolal počasí i času.',
-    }
+ 
+  {
+    icon: 'DoorOpen',
+    title: 'Automatická dvířka',
+    description:
+      'Součástí kurníků jsou automatická dvířka od českého výrobce Chytrý kurník, která se otevírají a zavírají zcela automaticky, bez vaší přítomnosti. Vývoj a výroba v České republice s důrazem na kvalitu, spolehlivost a dlouhou životnost.\n\nKe každému kurníku dostanete originální doklad o koupi dvířek a možnost případné reklamace přímo u výrobce. Pokud by se něco pokazilo, máte jistotu rychlého a vstřícného vyřízení.',
+  },
+  {
+    icon: 'Archive',
+    title: 'Krmicí a napájecí systém',
+    description:
+      'Pod kurníkem se nachází dva zdravotně nezávadné boxy – jeden na vodu s niplovým dávkovačem proti znečištění a druhý na krmný vápenec se spádovým dávkováním – umístěné na společném držáku. Díky promyšlenému uchycení lze tyto boxy vzájemně zaměnit podle světové strany, tedy podle toho, odkud svítí slunce. Box s vodou tak můžete snadno umístit do stínu, aby se voda v horkých dnech nepřehřívala.\n\nPlus uvnitř se nachází krmný box pro suchou i míchanou směs.',
+  },
+  {
+    icon: 'Layers',
+    title: 'Promyšlené zázemí pod kurníkem',
+    description:
+      'Hygiena – Pohodlí – Efektivní krmení\n\npopeliště – bidlo – krmící boxy',
+  },
+  {
+    icon: 'BoxPackage',
+    title: 'Prostorné snáškové hnízdo',
+    description:
+      'Na levé straně uvnitř kurníku se nachází jedno velké snáškové hnízdo přes celou šířku kurníku, do kterého se vejde 5 až 7 slepic současně. Díky otevřené konstrukci a pohodlnému přístupu si slepice najdou své místo bez stresu a tlačení.\n\nHnízdo je navrženo se sklonem a pevným plastovým roštem, díky čemuž se vajíčka po snesení automaticky odkootálí do sběrné části. Tím se minimalizuje riziko znečištění, pojídání, zahřívání a rozbíjení vajíček. Vajíčka jednoduše odeberete zvenku přes praktická výklopná dvířka – pohodlně a bez zbytečného rušení.',
+  },
+  {
+    icon: 'Wrench',
+    title: 'Rozebiratelný a omyvatelný interiér',
+    description:
+      'Celé snáškové hnízdo je plně rozebíratelné včetně přední a zadní stěny i plastového roštu. Všechno je hygienické a snadno čistitelné, což oceníte hlavně při pravidelné údržbě.\n\nBidla uvnitř kurníku jsou vyjímatelná, takže se snadno dostanete ke každému místu. Vnitřní plášť tvoří lakovaný plech, který je plně omyvatelný a odolný vůči vlhkosti. Podlaha je z voděodolné překližky, kterou lze rovněž jednoduše umýt. Celý interiér kurníku je tak navržen s důrazem na čistotu a dlouhou životnost.',
+  },
+  {
+    icon: 'AirVent',
+    title: 'Chytré větrání kurníku',
+    description:
+      'Nerezový anemostat s regulací proudění vzduchu. Chytré řešení pro ideální klima po celý rok. V létě umožňuje snadné a rychlé odvětrání přehřátého vzduchu, v zimě pak můžete regulovat přívod čerstvého vzduchu podle aktuální potřeby. Průtok vzduchu si snadno přizpůsobíte podle vlhkosti v podestýlce a počtu slepic, čímž zajistíte zdravé prostředí bez plísní a nadměrné vlhkosti.',
+  },
+  {
+    icon: 'GripHorizontal',
+    title: 'Snadná manipulace',
+    description:
+      'Kurník je vybaven čtyřmi masivními, pevně přivařenými madly, která slouží pro snadné uchopení při převozu nebo stěhování. Ať už potřebujete kurník přenést na nové místo nebo ho jednorázově usadit na zahradě, madla zajistí pevný a pohodlný úchop. Není potřeba složitá manipulace ani speciální nářadí.',
+  },
+  {
+    icon: 'HardDrive',
+    title: 'Podlaha',
+    description:
+      'Robustní a praktická podlaha z kvalitní protiskluzové překližky – bezpečný a hygienický prostor pro vaše slepice. Materiál je odolný vůči vlhkosti i mechanickému opotřebení, takže zvládne každodenní provoz i pravidelné čištění.',
+  },
+  {
+    icon: 'Ruler',
+    title: 'Rozměry kurníku',
+    description:
+      'Rozměry kurníku jsou: výška 1 m, šířka 1 m a délka 2 m. Kurník je navržen pro maximální počet 10 slepic. Váha kurníku je do 100 kg, takže je stále snadno manipulovatelný, například při stěhování nebo přepravě.',
+  },
+  {
+    icon: 'Stars',
+    title: 'Schůdky pro slepice',
+    description:
+      'Schůdky jsou vyrobené kompletně z modřínového dřeva, včetně příček pro snadný výstup. Příčky jsou spojeny nerezovými šrouby a spodní část je pro zvýšenou odolnost proti vlhkosti oplechovaná 1 mm hliníkovým plechem.',
+  },
+  {
+    icon: 'PanelRight',
+    title: 'Opláštění kurníku',
+    description:
+      'Opláštění tvoří moderní sendvičové panely o tloušťce 40 mm, které zajišťují výbornou tepelnou izolaci. Kurník si díky nim udrží stabilní klima po celý rok, což vytváří ideální podmínky pro zdraví a pohodu slepic.',
+  },
+  {
+    icon: 'HardHat',
+    title: 'Konstrukce kurníku',
+    description:
+      'Konstrukce je svařena z pevných ocelových profilů a pro maximální životnost je žárově zinkovaná. Odolává vlhkosti, korozi i povětrnostním vlivům – bez nutnosti údržby a bez rizika uhnívání jako u dřeva. Stabilní, robustní řešení, které vydrží dlouhé desítky let i v náročných venkovních podmínkách.',
+  },
+  {
+    icon: 'Feather',
+    title: 'Vnitřní a venkovní bidla',
+    description:
+      'Uvnitř kurníku jsou umístěna dvě bidla z odolného modřínového dřeva, třetí venkovní bidlo, také z modřínu, je dlouhé 100 cm a nachází se pod kurníkem, kde slepicím slouží jako příjemné místo k odpočinku během dne – chráněné před deštěm i silným sluncem.',
+  },
+  {
+    icon: 'Activity',
+    title: 'Venkovní popeliště',
+    description:
+      'Pod kurníkem se nachází prostorné popeliště o rozměrech 80 × 40 cm, které slepicím poskytuje ideální prostor pro přirozené popelení. Nachází se na čerstvém vzduchu a zároveň je chráněné před deštěm i ostrým sluncem, takže ho mohou využívat kdykoliv během dne.',
+  },
+   {
+    icon: 'Activity',
+    title: 'Bezpečnostní okno',
+    description:
+      'Součástí kurníku je velké bezpečnostní okno o rozměru 50×50 cm, které je osazeno v pevnostním hliníkovém rámu s výplní z 16mm polykarbonátu, který výborně izoluje a odolá nárazům.Bezpečnost a odolnost zajišťuje žárově zinkovaná síť v okně. Díky velikosti okna mají slepice dostatek přirozeného světla i během krátkých zimních dnů. Bezpečí, světlo a čerstvý vzduch – to vše v jednom okně.',
+  },
 ];
 
 const detailedFeatureIcons = {
-    Egg: <Egg className="h-10 w-10 text-primary" />,
-    GripVertical: <GripVertical className="h-10 w-10 text-primary" />,
-    Trash2: <Trash2 className="h-10 w-10 text-primary" />,
-    Lock: <Lock className="h-10 w-10 text-primary" />,
-    Wind: <Wind className="h-10 w-10 text-primary" />,
-    ShieldCheck: <ShieldCheck className="h-10 w-10 text-primary" />,
+  Egg: <Egg className="h-10 w-10 text-primary" />,
+  GripVertical: <GripVertical className="h-10 w-10 text-primary" />,
+  Trash2: <Trash2 className="h-10 w-10 text-primary" />,
+  Lock: <Lock className="h-10 w-10 text-primary" />,
+  Wind: <Wind className="h-10 w-10 text-primary" />,
+  ShieldCheck: <ShieldCheck className="h-10 w-10 text-primary" />,
+  DoorOpen: <DoorOpen className="h-10 w-10 text-primary" />,
+  Archive: <Archive className="h-10 w-10 text-primary" />,
+  Layers: <Layers className="h-10 w-10 text-primary" />,
+  BoxPackage: <BoxPackage className="h-10 w-10 text-primary" />,
+  Wrench: <Wrench className="h-10 w-10 text-primary" />,
+  AirVent: <AirVent className="h-10 w-10 text-primary" />,
+  GripHorizontal: <GripHorizontal className="h-10 w-10 text-primary" />,
+  HardDrive: <HardDrive className="h-10 w-10 text-primary" />,
+  Ruler: <Ruler className="h-10 w-10 text-primary" />,
+  Stairs: <Stars className="h-10 w-10 text-primary" />,
+  PanelRight: <PanelRight className="h-10 w-10 text-primary" />,
+  HardHat: <HardHat className="h-10 w-10 text-primary" />,
+  Feather: <Feather className="h-10 w-10 text-primary" />,
+  Activity: <Activity className="h-10 w-10 text-primary" />,
 };
-
 const interactiveFeatures = [
   {
     id: 1,
@@ -198,10 +283,11 @@ export default function Home() {
             className="absolute inset-0 w-full h-full object-cover"
             poster="https://placehold.co/1920x1080.png"
           >
-            <source src="https://videos.pexels.com/video-files/4762557/4762557-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source src="/videos/0716.mp4" type="video/mp4" />
             Váš prohlížeč nepodporuje video tag.
           </video>
-          <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-black/80 pointer-events-none" />
+
           <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4">
             <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
               Kvalitní domovy pro vaše hejno
@@ -256,8 +342,30 @@ export default function Home() {
                 <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Kdo stojí za vaším kurníkem?</h2>
                 <p className="mt-4 font-headline text-xl text-muted-foreground">{aboutMe.name}, {aboutMe.title}</p>
                 <p className="mt-6 text-muted-foreground">
-                  {aboutMe.bio}
-                </p>
+Jmenuji se Kamil Beneš a chovu slepic se věnuji už od roku 2000. Od roku 2010 navíc chovám brojlery na maso, takže velmi dobře vím, co slepice opravdu potřebují – i co chovatel ocení.
+<br/>
+<br/>
+Proto jsem spojil svůj dlouholetý koníček s řemeslem – jsem vyučený klempíř a celý život pracuji ve stavebnictví, hlavně s kovem, plechem a svařováním. Z těchto zkušeností vznikl projekt, kterému dnes věnuji veškerý svůj čas – výroba poctivých plně automatických a bezúdržbových kurníků pro slepice.
+<br/><br/>
+
+
+Každý kurník vyrábím ručně ve své dílně, kompletně sám, od konstrukce až po finální montáž. Nosná konstrukce je celosvařená z profilů a následně proveden žárový zinek, který vydrží až 40 let. Stěny tvoří polyuretanové panely (PUR) – lakovaný plech zvenku i zevnitř, žádné natírání, minimální údržba.
+<br/><br/>
+
+
+Součástí každého kurníku jsou plně automatická dvířka, která se samy zavírají i otvírají. Uvnitř na podlaze je voděodolná překližka, velké snáškové hnízdo, bidla, propracovaný větrací systém, a také krmný a napájecí systém, který je součástí každého kurníku.
+<br/>
+<br/>
+
+Nechybí ani popeliště a bidlo pod kurníkem, kde si slepice rády posedí. Kurník má i držadla pro snadné přenášení, takže se s ním dá pohodlně manipulovat.
+<br/>
+<br/>
+
+Dodávám kompletní kurníky na klíč – plně vybavené, funkční a připravené k okamžitému používání. Stačí postavit na místo a můžete začít chovat.
+<br/>
+<br/>
+
+Věřím, že poctivá práce a kvalitní materiály se vyplácí. Mým cílem je vyrábět kurníky, které vydrží dlouhé roky bez oprav a budou sloužit vám i slepicím s maximálním komfortem.                </p>
               </div>
             </div>
           </div>
