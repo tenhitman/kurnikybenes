@@ -48,7 +48,7 @@ const whyUsFeatures = [
   {
     icon: 'ShieldCheck',
     title: 'Postaveno, aby vydrželo',
-    description: 'Vyrobeno z prémiového, povětrnostně odolného borového dřeva a pozinkované oceli, aby chránilo vaše hejno před predátory a živly.',
+    description: 'Konstrukce je svařena z pevných ocelových profilů a pro maximální životnost je žárově zinkovaná. Odolává vlhkosti, korozi i povětrnostním vlivům – bez nutnosti údržby a bez rizika uhnívání jako u dřeva. Stabilní, robustní řešení, které vydrží dlouhé desítky let i v náročných venkovních podmínkách.',
   },
   {
     icon: 'Heart',
